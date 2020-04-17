@@ -31,7 +31,7 @@ const getWeatherByLocation = (locations: Array<string>) => {
   let requestUrl, data, temperatureInKelvin, timezoneUTC
 
   locations.map(async (location) => {
-    requestUrl = `http://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${ApiKey.openweatherapi}`
+    requestUrl = `https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=${ApiKey.openweatherapi}`
     try {
       data = await fetchData(requestUrl)
       temperatureInKelvin = await data.main.temp
